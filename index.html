@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find movies</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./assets/icons/play-button.svg"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+
+  <body>
+    <main class="searching-window">
+      <div class="form-container">
+        <h1 class="form-container__title">Find movies here</h1>
+        <form action="#" id="search-form" class="form-container__search-form">
+          <input
+            type="text"
+            class="form-container__search-form__request user-request"
+            name="search-form__request"
+            required
+            placeholder="Type title here..."
+          />
+
+          <div class="form-container__search-form__type">
+            <p class="form-container__search-form__type__title">
+              Choose the type of movie you are looking for:
+            </p>
+
+            <div class="form-container__search-form__type__container">
+              <div class="form-container__search-form__type__wrap">
+                <input
+                  class="form-container__search-form__type__item radio-butoon"
+                  type="radio"
+                  name="type"
+                  value="movie"
+                  id="movie"
+                  required
+                />
+                <label
+                  class="form-container__search-form__type__label"
+                  for="movie"
+                  >Movie</label
+                >
+              </div>
+
+              <div class="form-container__search-form__type__wrap">
+                <input
+                  class="form-container__search-form__type__item radio-butoon"
+                  type="radio"
+                  name="type"
+                  value="series"
+                  id="series"
+                  required
+                />
+                <label
+                  class="form-container__search-form__type__label"
+                  for="series"
+                  >Series</label
+                >
+              </div>
+
+              <div class="form-container__search-form__type__wrap">
+                <input
+                  class="form-container__search-form__type__item radio-butoon"
+                  type="radio"
+                  name="type"
+                  value="episode"
+                  id="episode"
+                  required
+                />
+                <label
+                  class="form-container__search-form__type__label"
+                  for="episode"
+                  >Episode</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <button class="form-container__search-form__button" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+
+      <div class="results-container">
+        <div class="headersElements">
+          <div class="pagination hiddenElement">
+            <div
+              class="pagination__item pagination__prev navButtonPrev unactiveButton"
+            >
+              <img
+                class="pagination__icon pagination__icon--prev"
+                src="./assets/icons/next.svg"
+                alt=""
+              />
+            </div>
+            <div
+              class="pagination__item pagination__first activePage navNumber pageNumber"
+            >
+              1
+            </div>
+            <div
+              class="pagination__item pagination__second navNumber pageNumber"
+            >
+              2
+            </div>
+            <div
+              class="pagination__item pagination__third navNumber pageNumber"
+            >
+              3
+            </div>
+            <div class="pagination__item pagination__dots">...</div>
+            <div class="pagination__item pagination__total pageNumber">50</div>
+
+            <div class="pagination__item pagination__next navButtonNext">
+              <img
+                class="pagination__icon"
+                src="./assets/icons/next.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <button class="openFavoritesList">favorites</button>
+        </div>
+        <div class="results-card firstScreen">
+          Here you will see results of the search
+        </div>
+
+        <div class="results-card errorScreen hiddenElement">
+          No movies were found for this query. <br />Please try again
+        </div>
+      </div>
+    </main>
+    <script src="./JS/script.js"></script>
+  </body>
+</html>

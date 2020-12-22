@@ -1,1 +1,1 @@
-# findMovies-service
+# shashuk-homework
